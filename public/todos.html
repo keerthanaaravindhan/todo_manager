@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Todo Management app</title>
+    <link rel="stylesheet" type="text/css" href="todo-app.css">
+</head>
+
+<body>
+    <article style="margin-left: 3px;">
+        <h1 class="Todopage-title">My To-do List</h1>
+        <form action="/action_page.php" class="submit-box">
+            <input type="search" id="text" placeholder="What's next?">
+            <input type="date" id="date">
+            <button type="submit">Add</button>
+        </form>
+
+        <section class="TodoSection">
+            <main style="display:flex;">
+                <h2 class="TodoSection-title">Due Today </h2>
+                <p style="margin-top: 11px; font-style: normal;color: gray;">0/4</p>
+            </main>
+            <div style="margin-left: 19px;">
+                <form action="/action_page.php">
+                    <input type="checkbox" id="box">
+                </form>
+                <p class="TodoSection-todo">Type something</p>
+                <p style="color: #C53030; font-size: 12px; margin-top: 4px; margin-left: 10px;">Overdue</p>
+            </div>
+            <div style="background: #F1EDF7; border-radius: 4px; width: 190px; text-align: center; margin-left: 19px;">
+                <form action="/action_page.php">
+                    <input type="checkbox" id="box">
+                </form>
+                <p class="TodoSection-todo">Type something</p>
+                <img class="image" src="delete-outline.jpg" style="margin-left: 21px;" />
+            </div>
+        </section>
+        <section class="TodoSection">
+            <main style="display:flex;">
+                <h2 class="TodoSection-title">Due Tomorrow </h2>
+                <p style="margin-top: 11px; font-style: normal;color: gray;">0/3</p>
+            </main>
+            <div style="margin-left: 19px;">
+                <form action="/action_page.php">
+                    <input type="checkbox" id="box">
+                </form>
+                <p class="TodoSection-todo">Type something</p>
+            </div>
+        </section>
+        <section class="TodoSection">
+            <main style="display:flex;">
+                <h2 class="TodoSection-title">Remaining </h2>
+                <p style="margin-top: 11px; font-style: normal;color: gray;">0/3</p>
+            </main>
+            <div style="margin-left: 19px;">
+                <form action="/action_page.php">
+                    <input type="checkbox" id="box">
+                </form>
+                <p class="TodoSection-todo">Type something</p>
+                <p style="color: #726A7E; font-size: 12px; margin-top: 4px; margin-left: 10px;">Jan 21</p>
+            </div>
+            <div style="margin-left: 19px;">
+                <form action="/action_page.php">
+                    <input type="checkbox" id="box">
+                </form>
+                <p class="TodoSection-todo">Type something</p>
+                <p style="color: #726A7E; font-size: 12px; margin-top: 4px; margin-left: 10px;">Jan 22</p>
+            </div>
+            <div style="margin-left: 19px;">
+                <form action="/action_page.php">
+                    <input type="checkbox" id="box">
+                </form>
+                <p class="TodoSection-todo">Type something</p>
+                <p style="color: #726A7E; font-size: 12px; margin-top: 4px; margin-left: 10px;">Jan 22</p>
+            </div>
+        </section>
+    </article>
+</body>
+
+</html>
