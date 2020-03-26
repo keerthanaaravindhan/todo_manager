@@ -12,59 +12,47 @@
 body{
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     max-width: 500px;
-    margin-top: 60px;
-    margin-bottom: 0;
-    margin-left: auto;
-    margin-right: auto;
+    margin: 0 auto;
+    margin-top: 60px; 
+    
 }
 
-#text{
-    border-radius: 5px;
-    width: 190px;
-    height: 32px;
-    margin-right: 10px;
-    border: 1px solid #BFB8CC;
-    color: #726A7E;
-    padding-left: 12px; 
-    font-size: 14px;
+.Todopage-title{
+    font-size: 20px;
+    line-height: 1.6;
+    font-weight: 600;
+    margin-bottom: 12px;
+    color: #453C52;
 }
 
-#date{
-    border-radius: 5px;
-    width: 120px;
-    height: 32px;
-    margin-right: 11px;
-    border: 1px solid #BFB8CC;
-    color: #726A7E;
-}
-
-#box{
-    border-radius: 0px;
-    width: 16px;
-    height: 16px; 
-    border: 2px solid #BFB8CC;
-    background-color: #FFFFFF;
-}
-
-div{
+.Add-Todo{
     display: flex;
-}
-
-.submit-box{
+    height: 32px;
+    align-items: stretch;
      margin-bottom: 22px;
 }
 
-.image{
-    width: auto;
-    height: 19px;
-    color: #453C52 ;
+.AddTodo-txt{
+
+    border-radius: 5px;
+    margin-right: 10px;
+    border: 1px solid #BFB8CC;
+    color: #726A7E;
+    padding: 6px 12px; 
+    font-size: 14px;
 }
 
-button{
-    padding-left: 22px;
-    padding-right: 22px;
-    padding-top: 7px;
-    padding-bottom: 7px;
+.AddTodo-date{
+    border-radius: 5px;
+    margin-right: 10px;
+    border: 1px solid #BFB8CC;
+    color: #726A7E;
+    padding: 6px; 
+    font-size: 14px;
+}
+
+.AddTodo-button{
+    padding: 7px 22px;
     background-color: #48BB78;
     font-size: 14px;
     color: #FFFFFF;
@@ -72,42 +60,90 @@ button{
     border: 1px solid #48BB78;
 }
 
-form{
-    align-items: center;
+.TodoSection{
+    margin-bottom: 20px;
 }
 
-.Todopage-title{
-    font-size: 20px;
-    line-height: 1.6;
-    width: 129px;
-    height: 27px;
-    color: #453C52;
+.TodoSection-heading{
+    display:flex; 
+    align-items: center;
 }
 
 .TodoSection-title{
     font-size: 14px;
     color: #453C52;
-    width: 130px;
-    height: 19px;
-    margin-bottom: 11px;
-    font-weight: bolder;
+    line-height: 1.4;
+    margin-right: 8px;
+    font-weight: 600;
+    margin-bottom: 8px;
 }
 
+.Todo-remaining{
+    color: #453C52;
+    margin-bottom: 8px;
+    
+}
 
-.TodoSection-todo{
+.Todo-item{
+    display: flex;
+    font-size: 14px;
+    margin-left: 8px;
+    margin-bottom: 6px;
+    color: #453C52;
+    padding: 2px 8px;
+    align-items: center;
+}
+
+.TodoItem-checkbox{
+    width: 16px;
+    height: 16px; 
+    border: 2px solid #BFB8CC;
+    background-color: #FFFFFF;
+}
+
+.image{
+    width: auto;
+    height: 19px;
+    color: #453C52 ;
+    margin-left: 21px;
+}
+
+.Todo-Item{
+    background: #F1EDF7;
+    border-radius: 4px;
+    /*width: 190px;*/
+    margin-left: 19px;
+    display: flex;
+    font-size: 14px;
+    margin-left: 8px;
+    margin-bottom: 6px;
+    color: #453C52;
+    padding: 2px 8px;
+    align-items: center;
+}
+
+.TodoItem-todo{
     font-size: 14px;
     margin-left: 8px;
     color: #453C52;
     margin-bottom: 2px;    
     margin-top: 2px;
-    width: 106px;
+   /* width: 106px;*/
     height: 19px;
 }
 
-.TodoSection{
-    margin-bottom: 10px;
+.TodoItem-overdue{
+    color: #C53030;
+    font-size: 12px;
+    margin-left: 10px;
 }
 
+.TodoItem-date{
+    color: #726A7E; 
+    font-size: 12px;
+   /* margin-top: 4px;*/ 
+    margin-left: 10px;
+}
 
 /* Typography scale 
 48px
