@@ -8,8 +8,8 @@
             <li >
 
                 <%if todo.completed %>
-                  <label class="Todo-item"> 
-                       <% if display_completed %>
+                  <% if display_completed %>
+                      <label class="Todo-item"> 
                            <input class="TodoItem-checkbox" type="checkbox" checked />
                            <s> <%= todo.todo_text %>  </s>
                            <% if show_due_date %>
@@ -18,8 +18,9 @@
                            <a href="javascript:void(0)" class="TodoItem-delete">
                               <img class="image" src="delete-outline.jpg" />
                            </a>
-                        <% end %>
-                   </label>
+                      </label>
+                  <% end %>
+                   
                 <% else %>
                    <label class="Todo-item"> 
                         <input class="TodoItem-checkbox" type="checkbox" />
@@ -33,7 +34,7 @@
                         </a>
                     </label>
                 <% end %>   
-                                      
+
             </li>
         <% end %>
     </ul>
