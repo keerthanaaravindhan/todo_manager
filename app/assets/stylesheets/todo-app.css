@@ -126,6 +126,7 @@ body{
     font-size: 10px;
     color: #453C52;
     margin-left: 10px;
+    align-items: center;
 }
 .TodoItem-todo{
     font-size: 14px;

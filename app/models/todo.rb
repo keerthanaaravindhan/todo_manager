@@ -18,8 +18,7 @@ class Todo < ActiveRecord::Base
     def due_later?
       due_date > Date.today
     end
-  
-     
+
     def self.overdue
       all.where("due_date < ?", Date.today)
     end

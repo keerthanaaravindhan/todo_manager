@@ -1,28 +1,28 @@
 <main style="margin-left: 3px;">
-    <h1 class="Todopage-title">My To-do List</h1>
-    <form action="/action_page.php" class="Add-Todo">
+   <h1 class="Todopage-title">My To-do List</h1>
+   <form action="/action_page.php" class="Add-Todo">
       <input class="AddTodo-txt" type="search" placeholder="What's next?">
-       <input class="AddTodo-date" type="date">
-       <button class="AddTodo-button" type="submit">Add</button>
-    </form>         
+      <input class="AddTodo-date" type="date">
+      <button class="AddTodo-button" type="submit">Add</button>
+   </form>         
 
-    <%= render partial: "todos-section", locals: {
-       section_title: "Overdue",
-       todos: Todo.overdue,
-       show_due_date: true,
-       display_completed: false   
-       } %> 
-    <%= render partial: "todos-section", locals: {
-       section_title: "Due Today",
-       todos: Todo.duetoday,
-       show_due_date: false,
-       display_completed: true 
-       } %> 
-    <%= render partial: "todos-section", locals: {
-       section_title: "Due Later",
-       todos: Todo.duelater,
-       show_due_date: true,
-       display_completed: true 
-       } %> 
-     
+   <%= render partial: "todos-section", locals: {
+      section_title: "Overdue",
+      todos: Todo.overdue,
+      show_due_date: true,
+      display_completed: false   
+      } %> 
+   <%= render partial: "todos-section", locals: {
+      section_title: "Due Today",
+      todos: Todo.duetoday,
+      show_due_date: false,
+      display_completed: true 
+      } %> 
+   <%= render partial: "todos-section", locals: {
+      section_title: "Due Later",
+      todos: Todo.duelater,
+      show_due_date: true,
+      display_completed: true 
+      } %> 
+      
 </main>
