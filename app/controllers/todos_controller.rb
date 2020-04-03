@@ -10,7 +10,8 @@ class TodosController < ApplicationController
   def show
     id = params[:id]
     todo = Todo.find(id)
-    render plain: todo.looks
+    render "todo"
+    #render plain: todo.looks
   end
 
   def create

@@ -122,6 +122,11 @@ body{
     align-items: center;
 }
 
+.TodoItem-dueDate{
+    font-size: 10px;
+    color: #453C52;
+    margin-left: 10px;
+}
 .TodoItem-todo{
     font-size: 14px;
     margin-left: 8px;
@@ -132,12 +137,12 @@ body{
     height: 19px;
 }
 
-.TodoItem-overdue{
+/*.TodoItem-overdue{
     color: #C53030;
     font-size: 12px;
     margin-left: 10px;
 }
-
+*/
 .TodoItem-date{
     color: #726A7E; 
     font-size: 12px;

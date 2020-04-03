@@ -1,9 +1,25 @@
-<h1> this is todo list </h1>
-<p>the date today is : <%=DateTime.now.to_s(:long)  %></p>
-<h2>There are a total of <%= Todo.count %> todos in our database</h2>
-<% Todo.all.each do |todo| %>
-<div style=" display: flex ;align-items: center">
-   <p style="color: darkblue; font-size: 32px"> <%= todo.todo_text %> </p>
-   <p style=" margin-left: 32px"> <%= todo.due_date %> </p>
-</div>
-<% end %>
+<main style="margin-left: 3px;">
+    <h1 class="Todopage-title">My To-do List</h1>
+    <form action="/action_page.php" class="Add-Todo">
+      <input class="AddTodo-txt" type="search" placeholder="What's next?">
+       <input class="AddTodo-date" type="date">
+       <button class="AddTodo-button" type="submit">Add</button>
+    </form>         
+
+    <%= render partial: "todos-section", locals: {
+       section_title: "Overdue",
+       todos: Todo.overdue,
+       show_due_date: true
+       } %> 
+    <%= render partial: "todos-section", locals: {
+       section_title: "Due Today",
+       todos: Todo.duetoday,
+       show_due_date: false
+       } %> 
+    <%= render partial: "todos-section", locals: {
+       section_title: "Due Later",
+       todos: Todo.duelater,
+       show_due_date: true
+       } %> 
+     
+</main>
