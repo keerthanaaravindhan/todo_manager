@@ -8,14 +8,20 @@
                  <li >
                    <label class="Todo-item">
                      <input class="TodoItem-checkbox" type="checkbox" />
-                     
-                       <%= todo.todo_text %>
-
-
-                       <% if show_due_date %>
-                         <p class="TodoItem-dueDate"> <%= todo.due_date.to_s(:short)%> </p>
-                       <% end %>
-                     
+                     <%= if todo.completed %>
+                       <%= if display_completed %>
+                           <%= todo.todo_text %>
+                            <% if show_due_date %>
+                               <p class="TodoItem-dueDate"> <%= todo.due_date.to_s(:short)%> </p>
+                            <% end %>
+                        <% end %>
+                     <% end %>
+                     <% else %>
+                        <%= todo.todo_text %>
+                        <% if show_due_date %>
+                            <p class="TodoItem-dueDate"> <%= todo.due_date.to_s(:short)%> </p>
+                        <% end %>
+                     <% end %>                    
                      <a href="javascript:void(0)" class="TodoItem-delete">
                          <img class="image" src="delete-outline.jpg" />
                      </a>
