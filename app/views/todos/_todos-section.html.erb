@@ -6,8 +6,9 @@
     <ul>
         <% todos.each do |todo| %>
             <li >
-                <label class="Todo-item">                 
-                    <%if todo.completed %>
+
+                <%if todo.completed %>
+                  <label class="Todo-item"> 
                        <% if display_completed %>
                            <input class="TodoItem-checkbox" type="checkbox" checked />
                            <s> <%= todo.todo_text %>  </s>
@@ -18,18 +19,21 @@
                               <img class="image" src="delete-outline.jpg" />
                            </a>
                         <% end %>
-                    <% else %>
+                   </label>
+                <% else %>
+                   <label class="Todo-item"> 
                         <input class="TodoItem-checkbox" type="checkbox" />
                         <%= todo.todo_text %>
                         <% if show_due_date %>
                             <p class="TodoItem-dueDate"> <%= todo.due_date.to_s(:short)%> </p>
                         <% end %>
-                        
+
                         <a href="javascript:void(0)" class="TodoItem-delete">
                            <img class="image" src="delete-outline.jpg" />
                         </a>
-                    <% end %>                         
-                </label>
+                    </label>
+                <% end %>   
+                                      
             </li>
         <% end %>
     </ul>
