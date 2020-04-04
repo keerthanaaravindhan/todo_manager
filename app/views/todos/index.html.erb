@@ -1,8 +1,8 @@
 <main style="margin-left: 3px;">
    <h1 class="Todopage-title">My To-do List</h1>
-   <form action="/action_page.php" class="Add-Todo">
-      <input class="AddTodo-txt" type="search" placeholder="What's next?">
-      <input class="AddTodo-date" type="date">
+   <form action="/todos" method="POST" class="Add-Todo">
+      <input class="AddTodo-txt" type="text" placeholder="What's next?" name="todo_text">
+      <input class="AddTodo-date" type="date" name="due_date">
       <button class="AddTodo-button" type="submit">Add</button>
    </form>         
 
@@ -24,5 +24,5 @@
       show_due_date: true,
       display_completed: true 
       } %> 
-      
+
 </main>
