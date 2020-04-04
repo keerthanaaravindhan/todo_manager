@@ -6,35 +6,27 @@
     <ul>
         <% todos.each do |todo| %>
             <li >
-
-                <%if todo.completed %>
-                  <% if display_completed %>
-                      <label class="Todo-item"> 
-                           <input class="TodoItem-checkbox" type="checkbox" checked />
-                           <s> <%= todo.todo_text %>  </s>
-                           <% if show_due_date %>
-                              <p class="TodoItem-dueDate"> <%= todo.due_date.to_s(:short)%> </p>
-                           <% end %>
-                           <a href="javascript:void(0)" class="TodoItem-delete">
-                              <img class="image" src="delete-outline.jpg" />
-                           </a>
-                      </label>
+               <label class="Todo-item">
+                  <%= form_with(url: "/todos/#{todo.id}", method: "put") do %> 
+                   <input class="TodoItem-checkbox" 
+                          name= "completed" 
+                          type="checkbox" <%=todo.completed ? "checked" : "" %> 
+                          onclick= "this.form.submit()"
+                    />
+                   <%#<input type="submit" value="Update" > %>
                   <% end %>
-                   
-                <% else %>
-                   <label class="Todo-item"> 
-                        <input class="TodoItem-checkbox" type="checkbox" />
+                   <% if todo.completed %>
+                            <s><%= todo.todo_text %> </s>
+                    <% else %>
                         <%= todo.todo_text %>
-                        <% if show_due_date %>
-                            <p class="TodoItem-dueDate"> <%= todo.due_date.to_s(:short)%> </p>
-                        <% end %>
-
-                        <a href="javascript:void(0)" class="TodoItem-delete">
-                           <img class="image" src="delete-outline.jpg" />
-                        </a>
-                    </label>
-                <% end %>   
-
+                    <% end %>
+                    <% if show_due_date %>
+                        <p class="TodoItem-dueDate"> <%= todo.due_date.to_s(:short)%> </p>
+                    <% end %>
+                    <a href="javascript:void(0)" class="TodoItem-delete">
+                        <img class="image" src="delete-outline.jpg" />
+                    </a>
+               </label>
             </li>
         <% end %>
     </ul>

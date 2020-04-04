@@ -8,21 +8,18 @@
 
    <%= render partial: "todos-section", locals: {
       section_title: "Overdue",
-      todos: Todo.overdue,
-      show_due_date: true,
-      display_completed: false   
+      todos: Todo.overdue.where(completed: false),
+      show_due_date: true 
       } %> 
    <%= render partial: "todos-section", locals: {
       section_title: "Due Today",
       todos: Todo.duetoday,
-      show_due_date: false,
-      display_completed: true 
+      show_due_date: false
       } %> 
    <%= render partial: "todos-section", locals: {
       section_title: "Due Later",
       todos: Todo.duelater,
-      show_due_date: true,
-      display_completed: true 
+      show_due_date: true
       } %> 
 
 </main>
