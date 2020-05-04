@@ -7,6 +7,11 @@
    #end
 
 class Todo < ActiveRecord::Base
+
+  belongs_to :user
+  # table called Users is present
+  # todos table will contain user_id attribute
+
     def due_today?
       due_date == Date.today
     end
