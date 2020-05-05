@@ -4,6 +4,7 @@ class TodosController < ApplicationController
 
   def index
     # render plain: Todo.all.order(:id).map{|todo| todo.looks}.join("\n")
+    
     render "index"
   end
 
