@@ -4,7 +4,8 @@ class TodosController < ApplicationController
 
   def index
     # render plain: Todo.all.order(:id).map{|todo| todo.looks}.join("\n")
-    @todos = Todo.of_user(current_user)
+    #@todos = Todo.of_user(current_user)
+    @todos = current_user.todos
     render "index"
   end
 
