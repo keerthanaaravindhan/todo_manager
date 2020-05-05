@@ -7,5 +7,7 @@ Rails.application.routes.draw do
   get "/" => "home#index"
   resources :todos
   resources :users
+  get "/signin" => "sessions#new", as: :new_sessions_path
+  post "/signin" => "sessions#create", as: :sessions_path
   post "users/login", to: "users#login"
 end
