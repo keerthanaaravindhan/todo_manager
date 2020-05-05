@@ -10,7 +10,7 @@ class SessionsController < ApplicationController
             redirect_to "/"
         else
             flash[:error] = "Your login attempt was invalid. Please retry."
-            redirect_to new_sessions_path
+            redirect_to new_sessions_path_url
         end
     end 
 

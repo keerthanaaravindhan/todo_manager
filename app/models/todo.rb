@@ -7,6 +7,10 @@
    #end
 
 class Todo < ActiveRecord::Base
+  
+  validates :todo_text, presence: true
+  validates :todo_text, length: { minimum: 2}
+  validates :due_date, presence: true
 
   belongs_to :user
   # table called Users is present
@@ -19,7 +23,7 @@ class Todo < ActiveRecord::Base
     def self.of_user(user)
       all.where(user_id: user.id)
     end
-    
+
     def over_due?
       due_date < Date.today
     end
