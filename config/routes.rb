@@ -4,11 +4,12 @@ Rails.application.routes.draw do
   #post "todos/create", to:"todos#create"
   #get "todos/:id", to:"todos#show"
 
-  get "/" => "home#index"
+  #get "/" => "home#index"
+  root to: "home#index"
   resources :todos
   resources :users
-  get "/signin" => "sessions#new", as: :new_sessions_path
-  post "/signin" => "sessions#create", as: :sessions_path
+  get "/signin" => "sessions#new", as: :new_sessions
+  post "/signin" => "sessions#create", as: :sessions
   #post "users/login", to: "users#login"
   delete "/signout" => "sessions#destroy", as: :destroy_session
 end
