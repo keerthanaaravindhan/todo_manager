@@ -20,13 +20,13 @@ class UsersController < ApplicationController
 
   # this create is used when sign up is used
   #def create
-   # User.create!(
-    #  first_name: params[:first_name],
-     # last_name: params[:last_name],
-     # email: params[:email],
-     # password: params[:password],
-    #)
-    #redirect_to "/"
+  # User.create!(
+   # first_name: params[:first_name],
+   # last_name: params[:last_name],
+   #   email: params[:email],
+   #   password: params[:password],
+   # )
+   # redirect_to "/"
   #end
 
   def create
@@ -37,8 +37,8 @@ class UsersController < ApplicationController
       password: params[:password],
     )
     if new_user.save
-      flash[:error] = "User Registered. Sign-in to continue"
-      redirect_to root_path
+     flash[:error] = "User Registered. Sign-in to continue"
+      redirect_to "/"
     else
       flash[:error] = new_user.errors.full_messages.join(", ")
       redirect_to new_user_path
